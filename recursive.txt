@@ -1,0 +1,18 @@
+#set up
+main:
+movei 1 ra
+movei 0 rb
+movei 1 rc
+movei 0 rd
+call sum
+halt
+# function sum()
+sum:
+add ra rb rd
+oport rd
+brao base
+move rd rb
+add ra rc ra
+call sum
+base:
+return

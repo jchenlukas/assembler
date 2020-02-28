@@ -1,0 +1,12 @@
+movei 0 ra
+movei 1 rb
+movei 10 re
+loop:
+oport rb
+move rb rc
+add ra rb rb
+move rc ra
+add ones re re
+braz exit
+bra loop
+exit:
